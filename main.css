@@ -1,0 +1,73 @@
+.outer {
+   display: inline-block;
+   width: 200px;
+   height: 200px;
+   border: 2px dashed black;
+   margin-right: 20px;
+   margin-bottom: 10px;
+}
+ 
+.inner {
+   width: 50px;
+   height: 50px;
+   background: #FFAB00;
+}
+/* Абсолютное позиционирование, автоматические отступы */
+.outer_center-absolute {
+   position: relative;
+}
+ 
+.outer_center-absolute .inner {
+   position: absolute;
+   top: 0;
+   left: 0;
+   right: 0;
+   bottom: 0;
+   margin: auto;
+}
+
+/* Абсолютное позиционирование, жёсткое смещение */
+.outer_center-middle {
+   position: relative;
+}
+ 
+.outer_center-middle .inner {
+   position: absolute;
+   left: 50%;
+   top: 50%;
+   margin-left: -25px;
+   margin-top: -25px;
+}
+
+/* Абсолютное позиционирование, трансформация */
+.outer_center-transform {
+   position: relative;
+}
+ 
+.outer_center-transform .inner {
+   position: absolute;
+   top: 50%;
+   left: 50%;
+   transform: translate(-50%, -50%);
+}
+
+/* Flexbox, центрирование по осям */
+.outer {
+   vertical-align: top;
+ 
+.outer_center-flexbox {
+   display: inline-flex;
+   align-items: center;
+   justify-content: center;
+}
+
+  /* Flexbox, автоматические границы */
+  .outer_center-margin-auto {
+   display: flex;
+}
+ 
+.outer_center-margin-auto .inner {
+   margin: auto;
+}
+
+
